@@ -18,7 +18,7 @@ def is_palindrome(text: str) -> bool:
     for c in text[:halfway]:
         queue.append(c)
     
-    for c in text[halfway + 1:]:
+    for c in text[halfway + len(text) % 2:]:
         if c != queue.pop():
             return False
         
